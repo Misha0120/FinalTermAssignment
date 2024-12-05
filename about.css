@@ -1,0 +1,33 @@
+:root {
+  --primary-color: #1c1c24;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.italic {
+  font-family: "Merriweather", serif;
+  font-style: italic;
+}
+
+.upperSection {
+  height: 60vh;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+}
+
+.lowerSection {
+  background-color: #f6f2f1;
+  padding: 1vw 16vw;
+}
+
+.lowerSection .story {
+  font-weight: 500;
+  color: var(--primary-color);
+  line-height: 1.8;
+}
+
