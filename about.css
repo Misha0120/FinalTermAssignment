@@ -1,5 +1,6 @@
 :root {
   --primary-color: #1c1c24;
+  --secondary-color: #0d0d0f;
 }
 
 body {
@@ -8,8 +9,18 @@ body {
   padding: 0;
 }
 
+h2{
+  color:var(--secondary-color) ;
+}
+
+p{
+  font-weight: 500;
+  color: var(--primary-color);
+  line-height: 1.8;
+}
+
 .italic {
-  font-family: "Merriweather", serif;
+  font-family: "Playfair", serif;
   font-style: italic;
 }
 
@@ -25,26 +36,15 @@ body {
   padding: 1vw 16vw;
 }
 
-.lowerSection .story {
-  font-weight: 500;
-  color: var(--primary-color);
-  line-height: 1.8;
-}
-
 .ownersImage{
     object-fit: contain;
 }
 
-.right p {
-    font-weight: 500;
-  color: var(--primary-color);
-  line-height: 1.8;
-}
-
 .bannerImageSection{
     background-image: url('bannerImage.jpeg');
-    background-size: cover;
+    /* background-size: cover; */
     background-position: center;
     height: 600px;
     width: 100%;
 }
+
