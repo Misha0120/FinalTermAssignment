@@ -1,0 +1,50 @@
+:root {
+  --primary-color: #1c1c24;
+  --secondary-color: #0d0d0f;
+}
+
+body {
+  font-family: "Playfair", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+h2{
+  color:var(--secondary-color) ;
+}
+
+p{
+  font-weight: 500;
+  color: var(--primary-color);
+  line-height: 1.8;
+}
+
+.italic {
+  font-family: "Playfair", serif;
+  font-style: italic;
+}
+
+.upperSection {
+  height: 60vh;
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+}
+
+.lowerSection {
+  background-color: #f6f2f1;
+  padding: 1vw 16vw;
+}
+
+.ownersImage{
+    object-fit: contain;
+}
+
+.bannerImageSection{
+    background-image: url('bannerImage.jpeg');
+    /* background-size: cover; */
+    background-position: center;
+    height: 600px;
+    width: 100%;
+}
+
