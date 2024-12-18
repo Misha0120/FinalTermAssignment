@@ -9,11 +9,12 @@ body {
   padding: 0;
 }
 
-h2{
-  color:var(--secondary-color) ;
+h2 {
+  color: var(--secondary-color);
+  text-align: start;
 }
 
-p{
+p {
   font-weight: 500;
   color: var(--primary-color);
   line-height: 1.8;
@@ -36,15 +37,62 @@ p{
   padding: 1vw 16vw;
 }
 
-.ownersImage{
-    object-fit: contain;
+.ownersImage {
+  object-fit: contain;
 }
 
-.bannerImageSection{
-    background-image: url('bannerImage.jpeg');
-    /* background-size: cover; */
-    background-position: center;
-    height: 600px;
-    width: 100%;
+.bannerImageSection {
+  background-image: url("bannerImage.jpeg");
+  background-position: center;
+  height: 600px;
+  width: 100%;
 }
 
+.missionVideoSection {
+  padding: 5vw 10vw;
+  background-color: #fefefe;
+}
+
+.testimonialSection {
+  background-color: #f6f2f1;
+  padding: 5vw 10vw;
+}
+
+.contactSection {
+  background-color: #fefefe;
+  padding: 5vw 10vw;
+}
+
+.testimonial {
+  border: 1px solid #ddd;
+  padding: 2vw;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.contactForm {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.contactForm input,
+.contactForm textarea {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.contactForm button {
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contactForm button:hover {
+  background-color: #353536;
+}
