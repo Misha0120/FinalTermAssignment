@@ -9,11 +9,12 @@ body {
   padding: 0;
 }
 
-h2{
-  color:var(--secondary-color) ;
+h2 {
+  color: var(--secondary-color);
+  text-align: start;
 }
 
-p{
+p {
   font-weight: 500;
   color: var(--primary-color);
   line-height: 1.8;
@@ -36,15 +37,143 @@ p{
   padding: 1vw 16vw;
 }
 
-.ownersImage{
-    object-fit: contain;
+.ownersImage {
+  object-fit: contain;
 }
 
-.bannerImageSection{
-    background-image: url('bannerImage.jpeg');
-    /* background-size: cover; */
-    background-position: center;
-    height: 600px;
-    width: 100%;
+.bannerImageSection {
+  background-image: url("bannerImage.jpeg");
+  background-position: center;
+  height: 600px;
+  width: 100%;
 }
 
+.missionVideoSection {
+  padding: 5vw 10vw;
+  background-color: #fefefe;
+}
+
+.testimonialSection {
+  background-color: #f6f2f1;
+  padding: 5vw 10vw;
+}
+
+.contactSection {
+  background-color: #fefefe;
+  padding: 5vw 10vw;
+}
+
+.testimonial {
+  border: 1px solid #ddd;
+  padding: 2vw;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.contactForm {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.contactForm input,
+.contactForm textarea {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.contactForm button {
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contactForm button:hover {
+  background-color: #353536;
+}
+
+/* navbar styles */
+/* General Reset */
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+    position: fixed;
+    top: 0;
+    width: 100%; /* Ensures it spans the full width of the viewport */
+    z-index: 1000; /* Ensures it stays above other content */
+    opacity: 0.7; /* Sets 90% opacity */
+  }
+  
+  /* Left Navigation */
+  .nav-left {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    font-weight: 500;
+    color: #5C4033;
+    position: relative;
+  }
+  
+  .nav-link:hover {
+    color: #000000;
+  }
+  
+  /* Center Logo */
+  .nav-center {
+    flex-grow: 1;
+    text-align: center;
+  }
+  
+  .logo {
+    font-size: 2rem;
+    
+    color: #2a1d17;
+    font-family: century;
+    text-decoration: none;
+    padding-right: 160px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 300;  
+  }
+  
+  /* Right Icons */
+  .nav-right {
+    display: flex;
+    gap: 15px;
+    color: #5C4033;
+  }
+  a {
+    color: #5C4033; /* Replace with your desired color */
+    text-decoration: none; /* Removes the underline */
+  }
+  
+  a:hover {
+    color: #000000; /* Optional: Changes color on hover */
+  }
+
+  
+
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .nav-left {
+      display: none;
+    }
+  
+    .nav-right {
+      gap: 20px;
+    }
+  }
