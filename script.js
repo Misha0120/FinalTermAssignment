@@ -8,25 +8,30 @@ document.addEventListener("DOMContentLoaded", function () {
         .then(products => {
 
             products.forEach(product => {
-            
                 const card = document.createElement('div');
                 card.className = 'col-md-4 col-sm-6 col-lg-3 d-flex align-items-stretch';
-
+            
                 card.innerHTML = `
-                    <div class="card shadow-sm">
-                        <img src="${product.image}" class="card-img-top" alt="${product.title}">
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">${product.title}</h5>
-                            <p class="card-text text-truncate" style="max-height: 3em;">${product.description}</p>
-                            <p class="fw-bold">$${product.price}</p>
-                            <button class="btn btn-primary mt-auto">Add to Cart</button>
-                        </div>
+                <div class="card shadow-sm d-flex flex-column style= "">
+                    <img 
+                        src="${product.image}" 
+                        class="card-img-top" 
+                        alt="${product.title}" 
+                        style="object-fit: contain; object-position: center; width: 100%; height: 200px; background-color: #f6f2f1;"
+                    >
+                    <div class="card-body d-flex flex-column" style="flex-grow: 1;">
+                        <h5 class="card-title">${product.title}</h5>
+                        <p class="card-text" style="height: 60px; overflow: hidden; text-overflow: ellipsis; font-size: 0.9rem;">${product.description}</p>
+                        <p class="fw-bold">$${product.price}</p>
+                        <button class="btn btn-beige mt-auto" style="background-color: #f5e7dc; color: #1c1c24; border: none;">Add to Cart</button>
                     </div>
-                `;
-
-                // Append the card to the parent div
+                </div>
+            `;
+            
                 productContainer.appendChild(card);
             });
+            
+            
         })
         .catch(error => {
             console.error("Error fetching products:", error);
@@ -77,3 +82,4 @@ function loginFunc() {
 
     document.getElementById("loginForm").reset();
 }
+

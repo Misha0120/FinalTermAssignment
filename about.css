@@ -14,7 +14,7 @@ h2 {
   text-align: start;
 }
 
-p {
+.container p {
   font-weight: 500;
   color: var(--primary-color);
   line-height: 1.8;
@@ -26,6 +26,7 @@ p {
 }
 
 .upperSection {
+  margin-top: 80px; 
   height: 60vh;
   background-size: cover;
   background-position: center;
@@ -97,83 +98,153 @@ p {
   background-color: #353536;
 }
 
-/* navbar styles */
-/* General Reset */
 
+/* Footer Styling */
+.footer {
+  font-family: 'Playfair Display', serif;
+  background-color: #5C4033;
+  color: #fff;
+  padding: 4rem 2rem;
+}
 
-.navbar {
-    display: flex;
-    justify-content: space-between;
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.footer-col {
+  flex: 1;
+  min-width: 250px;
+}
+
+.footer-col h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.footer-col p, .footer-col ul li {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.footer-col ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.footer-col ul li a {
+  color: #f8c291;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+  color: #666262;
+  text-decoration: underline;
+}
+
+.social-icons a {
+  color: #f8c291;
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: #fff;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+  }
+
+  .image {
+    width: 100%;
+    height: 50vh;
+  }
+
+  .parent {
+    flex-direction: column;
     align-items: center;
-    padding: 1rem 2rem;
-    background-color: white;
-    border-bottom: 1px solid #ddd;
-    position: fixed;
-    top: 0;
-    width: 100%; /* Ensures it spans the full width of the viewport */
-    z-index: 1000; /* Ensures it stays above other content */
-    opacity: 0.7; /* Sets 90% opacity */
   }
-  
-  /* Left Navigation */
-  .nav-left {
-    display: flex;
-    gap: 20px;
+
+  .child {
+    width: 90%;
+    margin-bottom: 20px;
   }
-  
-  .nav-link {
-    text-decoration: none;
-    font-weight: 500;
-    color: #5C4033;
-    position: relative;
-  }
-  
-  .nav-link:hover {
-    color: #000000;
-  }
-  
-  /* Center Logo */
-  .nav-center {
-    flex-grow: 1;
+
+  .footer-row {
+    flex-direction: column;
+    align-items: center;
     text-align: center;
   }
-  
-  .logo {
-    font-size: 2rem;
-    
-    color: #2a1d17;
-    font-family: century;
-    text-decoration: none;
-    padding-right: 160px;
-    font-family: 'Playfair Display', serif;
-    font-weight: 300;  
+
+  .footer-col {
+    min-width: 100%;
   }
-  
-  /* Right Icons */
+}
+
+/* Navbar Fix */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: white;
+  border-bottom: 1px solid #ddd;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  opacity: 0.9;
+}
+
+/* Navbar Spacing Fix */
+.nav-left, .nav-right {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-link {
+  text-decoration: none;
+  font-weight: 500;
+  color: #5C4033;
+  position: relative;
+}
+
+.nav-link:hover {
+  color: #000;
+}
+
+.logo {
+  font-size: 2rem;
+  color: #2a1d17;
+  font-family: 'Playfair Display', serif;
+  font-weight: 300;
+}
+
+/* Responsive Navbar Fix */
+@media (max-width: 768px) {
+  .nav-left {
+    display: none;
+  }
+
   .nav-right {
-    display: flex;
     gap: 15px;
-    color: #5C4033;
   }
-  a {
-    color: #5C4033; /* Replace with your desired color */
-    text-decoration: none; /* Removes the underline */
-  }
-  
-  a:hover {
-    color: #000000; /* Optional: Changes color on hover */
-  }
-
-  
-
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .nav-left {
-      display: none;
-    }
-  
-    .nav-right {
-      gap: 20px;
-    }
-  }
+}
